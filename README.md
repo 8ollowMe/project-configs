@@ -55,8 +55,8 @@ configs/
 
 Config Server(13100 포트)를 통해 현재 저장소의 설정이 어떻게 JSON으로 서빙되는지 직접 확인할 수 있습니다.
 
-- URL 형식: http://localhost:13100/{application}/{profile}
-- 확인 예시: http://localhost:13100/vendor/local
+- URL 형식: `http://localhost:13100/{application}/{profile}`
+- 확인 예시: `http://localhost:13100/vendor/default`
 
 <img src="docs/image/sample1.png">
 

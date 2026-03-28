@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false # Netflix Ribbon 대신 Spring Cloud LoadBalancer 사용
+feign:
+  client:
+    default: # 공통 설정
+      connectTimeout: 5000 # 연결 시도 타임아웃: 5000ms = 5초
+      readTimeout: 5000 # 읽기 타임아웃: 5000ms = 5초
+      loggerLevel: full # 로거 레벨: [NONE, BASIC, HEADERS, FULL]
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info,metrics

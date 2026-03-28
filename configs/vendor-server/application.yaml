@@ -1,0 +1,19 @@
+server:
+  port: 10003
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/${DB_NAME:followme}
+    username: ${DB_USERNAME:followme}
+    password: ${DB_PASSWORD:followme}
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:followme}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true

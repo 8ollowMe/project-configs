@@ -15,3 +15,13 @@ management:
     web:
       exposure:
         include: refresh,health,info,metrics
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: ${HOSTNAME:localhost}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8761/eureka/}

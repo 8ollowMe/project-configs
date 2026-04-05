@@ -12,6 +12,13 @@ spring:
       minimum-idle: 5
       connection-timeout: 30000
 
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
   kafka:
     bootstrap-servers: 172.31.10.105:9092,172.31.1.110:9092,172.31.15.248:9092
     properties:
